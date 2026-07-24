@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Portfolio Admin | Le Bui Tan Truong</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#14110f" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-page">
+    <main class="admin-shell">
+      <section class="admin-panel">
+        <div class="admin-heading">
+          <p class="eyebrow">Content Admin</p>
+          <h1>Portfolio translations</h1>
+          <p>
+            Edit live content stored in Supabase. The public site keeps English
+            JSON as a fallback if the database is unavailable.
+          </p>
+        </div>
+
+        <div class="admin-notice" data-admin-setup hidden>
+          Add your Supabase URL and anon key in <code>config.js</code>, then set
+          <code>useSupabaseContent</code> to <code>true</code>.
+        </div>
+
+        <form class="admin-card" data-admin-login>
+          <h2>Sign in</h2>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Password
+            <input
+              type="password"
+              name="password"
+              autocomplete="current-password"
+              required
+            />
+          </label>
+          <button class="button button--dark" type="submit">Sign in</button>
+        </form>
+
+        <section class="admin-editor" data-admin-editor hidden>
+          <div class="admin-toolbar">
+            <label>
+              Locale
+              <select data-admin-locale>
+                <option value="en">English</option>
+                <option value="vi">Vietnamese</option>
+              </select>
+            </label>
+            <label>
+              Page
+              <select data-admin-page>
+                <option value="home">Home</option>
+                <option value="projects">Projects</option>
+              </select>
+            </label>
+            <button class="button button--light" type="button" data-admin-load>
+              Load
+            </button>
+            <button class="button button--dark" type="button" data-admin-save>
+              Save
+            </button>
+            <button class="button button--light" type="button" data-admin-logout>
+              Sign out
+            </button>
+          </div>
+
+          <div class="admin-card admin-meta">
+            <h2>Meta</h2>
+            <label>
+              Title
+              <input type="text" data-admin-title />
+            </label>
+            <label>
+              Description
+              <textarea rows="3" data-admin-description></textarea>
+            </label>
+          </div>
+
+          <div class="admin-fields" data-admin-fields></div>
+        </section>
+
+        <p class="admin-status" data-admin-status role="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>

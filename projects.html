@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projects by Le Bui Tan Truong across Flutter, React Native, Kotlin, POS systems, university apps, e-commerce, community management, music streaming, and reading platforms."
+      data-i18n-attr="content:meta.description"
+    />
+    <title data-i18n="meta.title">Projects | Le Bui Tan Truong</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#14110f" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "index.html#person",
+            "name": "Le Bui Tan Truong",
+            "jobTitle": "Mobile Developer",
+            "knowsAbout": [
+              "Flutter",
+              "React Native",
+              "Kotlin",
+              "BLoC",
+              "Redux",
+              "MVVM",
+              "RESTful APIs",
+              "Firebase",
+              "Mobile Architecture"
+            ],
+            "sameAs": ["https://github.com/lbtt2801"]
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "projects.html#projects",
+            "name": "Mobile project case studies",
+            "about": { "@id": "index.html#person" },
+            "hasPart": [
+              { "@type": "CreativeWork", "name": "DP247", "description": "POS, inventory, billing, promotion, loyalty, barcode, and receipt printing mobile workflows." },
+              { "@type": "CreativeWork", "name": "HUIT EDU", "description": "Flutter lecturer operations app for attendance, tasks, HR, and internal workflows." },
+              { "@type": "CreativeWork", "name": "HUIT STUDENT", "description": "Flutter student survey, feedback, and teaching quality evaluation platform." },
+              { "@type": "CreativeWork", "name": "MY DP247", "description": "React Native commerce and food ordering app with maps and promotions." },
+              { "@type": "CreativeWork", "name": "DC4.0", "description": "React Native community management platform for neighborhood and residential area operations." },
+              { "@type": "CreativeWork", "name": "HearMe App", "description": "Kotlin music streaming app using Jetpack Compose, Firebase, and MVVM." },
+              { "@type": "CreativeWork", "name": "Reading Habit", "description": "Children's reading platform using Kotlin, Jetpack Compose, Clean Architecture, and Retrofit." }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Le Bui Tan Truong home">
+        <span>LE</span><span>TRUONG</span>
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        data-i18n-attr="aria-label:nav.toggle"
+        aria-expanded="false"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" data-nav>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a class="is-active" href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="index.html#experience" data-i18n="nav.experience">Experience</a>
+        <a href="index.html#stack" data-i18n="nav.stack">Stack</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+        <div
+          class="language-switcher"
+          aria-label="Language selection"
+          data-i18n-attr="aria-label:language.label"
+          data-language-switcher
+        >
+          <button type="button" data-locale-option="en">EN</button>
+          <button type="button" data-locale-option="vi">VI</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-hero" aria-labelledby="projects-title">
+        <div>
+          <p class="eyebrow" data-i18n="projects.hero.eyebrow">Case study system</p>
+          <h1 id="projects-title">
+            <span data-i18n="projects.hero.title1">Mobile products</span>
+            <span data-i18n="projects.hero.title2">framed by architecture, UX, and implementation proof.</span>
+          </h1>
+          <p>
+            <span
+              data-i18n="projects.hero.lede1"
+              >Each project is structured around the product problem, core
+              mobile stack,</span
+            >
+            <span
+              data-i18n="projects.hero.lede2"
+              >and the implementation details that make it credible in
+              production.</span
+            >
+          </p>
+        </div>
+        <aside class="project-hero__stats" aria-label="Project summary">
+          <div><strong>7</strong><span data-i18n="projects.stats.projects">Projects</span></div>
+          <div><strong>3</strong><span data-i18n="projects.stats.stacks">Mobile stacks</span></div>
+          <div><strong>2023</strong><span data-i18n="projects.stats.release">First release</span></div>
+        </aside>
+      </section>
+
+      <section class="project-overview" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="projects.overview.eyebrow">Project index</p>
+          <h2 id="overview-title" data-i18n="projects.overview.title">Project overview</h2>
+        </div>
+        <div class="project-grid">
+          <a href="#dp247">
+            <span>01</span>
+            <h3>DP247</h3>
+            <p data-i18n="projects.overview.dp247">POS platform for restaurants and retail operations.</p>
+            <small>React Native · Redux · POS</small>
+          </a>
+          <a href="#huit-edu">
+            <span>02</span>
+            <h3>HUIT EDU</h3>
+            <p data-i18n="projects.overview.huitEdu">
+              Lecturer operations app for attendance, tasks, HR, and workflows.
+            </p>
+            <small>Flutter · BLoC · FCM</small>
+          </a>
+          <a href="#huit-student">
+            <span>03</span>
+            <h3>HUIT STUDENT</h3>
+            <p data-i18n="projects.overview.huitStudent">
+              Student feedback, survey, and teaching quality evaluation app.
+            </p>
+            <small>Flutter · REST APIs · Survey</small>
+          </a>
+          <a href="#my-dp247">
+            <span>04</span>
+            <h3>MY DP247</h3>
+            <p data-i18n="projects.overview.myDp247">
+              Consumer shopping, food ordering, promotions, and store discovery.
+            </p>
+            <small>React Native · Redux · Maps</small>
+          </a>
+          <a href="#dc40">
+            <span>05</span>
+            <h3>DC4.0</h3>
+            <p data-i18n="projects.overview.dc40">
+              Community management platform for neighborhood and residential
+              operations.
+            </p>
+            <small>React Native · Redux · REST APIs</small>
+          </a>
+          <a href="#hearme">
+            <span>06</span>
+            <h3>HearMe App</h3>
+            <p data-i18n="projects.overview.hearme">
+              Android music streaming with playlists, artists, lyrics, and
+              playback.
+            </p>
+            <small>Kotlin · Compose · Firebase</small>
+          </a>
+          <a href="#reading-habit">
+            <span>07</span>
+            <h3>Reading Habit</h3>
+            <p data-i18n="projects.overview.readingHabit">
+              Children's digital reading platform for stories, comics, audio,
+              and video.
+            </p>
+            <small>Kotlin · Clean Architecture · Retrofit</small>
+          </a>
+        </div>
+      </section>
+
+      <section
+        class="section project-system-notes reveal"
+        aria-labelledby="system-notes-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="projects.system.eyebrow">Engineering signal</p>
+          <h2 id="system-notes-title" data-i18n="projects.system.title">
+            What every case study is designed to prove.
+          </h2>
+        </div>
+        <div class="stack-board">
+          <article>
+            <strong data-i18n="projects.system.architectureLabel">Architecture</strong
+            ><span
+              data-i18n="projects.system.architectureBody"
+              >BLoC, Redux, MVVM, Clean Architecture, reusable UI modules.</span
+            >
+          </article>
+          <article>
+            <strong data-i18n="projects.system.integrationLabel">Integration</strong
+            ><span
+              data-i18n="projects.system.integrationBody"
+              >RESTful APIs, Firebase Cloud Messaging, maps, location, POS
+              printers.</span
+            >
+          </article>
+          <article>
+            <strong data-i18n="projects.system.uxLabel">Product UX</strong
+            ><span
+              data-i18n="projects.system.uxBody"
+              >Ordering, survey, media playback, reading, attendance, and
+              community operations.</span
+            >
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="dp247"
+        class="project-case reveal"
+        aria-labelledby="dp247-title"
+      >
+        <div class="project-case__header">
+          <p class="section-number">01</p>
+          <div>
+            <p class="eyebrow" data-i18n="projects.dp247.eyebrow">Featured project</p>
+            <h2 id="dp247-title">DP247</h2>
+          </div>
+          <div class="project-tags">
+            <span>React Native</span>
+            <span>Redux</span>
+            <span>POS</span>
+            <span>Operations</span>
+          </div>
+        </div>
+
+        <div class="case-hero-grid">
+          <div class="case-summary">
+            <h3 data-i18n="projects.dp247.summaryTitle">
+              Digital transformation platform for restaurants and retail stores.
+            </h3>
+            <p data-i18n="projects.dp247.summaryBody">
+              DP247 supports sales management, inventory, human resources, order
+              workflows, billing, promotions, loyalty programs, stock control,
+              and receipt printing for shop owners and business teams.
+            </p>
+            <dl>
+              <div>
+                <dt data-i18n="projects.common.timeline">Timeline</dt>
+                <dd>Mar 2024 - Present</dd>
+              </div>
+              <div>
+                <dt data-i18n="projects.common.customer">Customer</dt>
+                <dd data-i18n="projects.dp247.customer">Shop owners, businesses</dd>
+              </div>
+              <div>
+                <dt data-i18n="projects.common.team">Team</dt>
+                <dd data-i18n="projects.common.team3">3 people</dd>
+              </div>
+              <div>
+                <dt data-i18n="projects.common.role">Role</dt>
+                <dd data-i18n="projects.common.mobileDeveloper">Mobile Developer</dd>
+              </div>
+            </dl>
+          </div>
+          <div
+            class="operations-map"
+            aria-label="DP247 mobile workflow modules"
+          >
+            <span class="map-node map-node--core" data-i18n="projects.dp247.map.orders">Orders</span>
+            <span class="map-node" data-i18n="projects.dp247.map.tables">Tables</span>
+            <span class="map-node" data-i18n="projects.dp247.map.billing">Billing</span>
+            <span class="map-node" data-i18n="projects.dp247.map.products">Products</span>
+            <span class="map-node" data-i18n="projects.dp247.map.inventory">Inventory</span>
+            <span class="map-node" data-i18n="projects.dp247.map.barcode">Barcode</span>
+            <span class="map-node" data-i18n="projects.dp247.map.receipt">Receipt Print</span>
+          </div>
+        </div>
+
+        <div class="detail-grid">
+          <article>
+            <span>01</span>
+            <h3 data-i18n="projects.dp247.detail1Title">Core POS modules</h3>
+            <p data-i18n="projects.dp247.detail1Body">
+              Built table management, order processing, billing, and product
+              management flows.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3 data-i18n="projects.dp247.detail2Title">Inventory workflows</h3>
+            <p data-i18n="projects.dp247.detail2Body">
+              Developed import/export management workflows for goods tracking
+              and stock control.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3 data-i18n="projects.dp247.detail3Title">Customer engagement</h3>
+            <p data-i18n="projects.dp247.detail3Body">
+              Implemented promotions and loyalty points to support reward
+              campaigns.
+            </p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3 data-i18n="projects.dp247.detail4Title">Printer and barcode</h3>
+            <p data-i18n="projects.dp247.detail4Body">
+              Integrated receipt printing over Wi-Fi, Bluetooth, USB, and
+              barcode scanning.
+            </p>
+          </article>
+        </div>
+        <div class="case-lens">
+          <article>
+            <strong data-i18n="projects.common.architectureLens">Architecture lens</strong>
+            <p data-i18n="projects.dp247.lensArchitecture">
+              Designed mobile modules around predictable state, reusable UI, and
+              API contracts that can support multiple operational flows in the
+              same product ecosystem.
+            </p>
+          </article>
+          <article>
+            <strong data-i18n="projects.common.businessProof">Business proof</strong>
+            <p data-i18n="projects.dp247.lensBusiness">
+              Turns restaurant and retail complexity into fast, repeatable
+              workflows for orders, stock movement, payments, promotions, and
+              receipts.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="huit-edu"
+        class="project-case secondary-case reveal"
+        aria-labelledby="huit-edu-title"
+      >
+        <div class="project-case__header">
+          <p class="section-number">02</p>
+          <div>
+            <p class="eyebrow" data-i18n="projects.huitEdu.eyebrow">Flutter university operations</p>
+            <h2 id="huit-edu-title">HUIT EDU</h2>
+          </div>
+          <div class="project-tags">
+            <span>Flutter</span>
+            <span>Dart</span>
+            <span>BLoC</span>
+            <span>FCM</span>
+          </div>
+        </div>
+        <div class="case-hero-grid">
+          <div class="case-summary">
+            <h3 data-i18n="projects.huitEdu.summaryTitle">Daily operations platform for lecturers at HUIT.</h3>
+            <p data-i18n="projects.huitEdu.summaryBody">
+              Supports task management, attendance tracking, teaching
+              activities, HR processes, lecturer management, and internal
+              workflow modules.
+            </p>
+            <dl>
+              <div>
+                <dt data-i18n="projects.common.timeline">Timeline</dt>
+                <dd>Feb 2024 - Present</dd>
+              </div>
+              <div>
+                <dt data-i18n="projects.common.customer">Customer</dt>
+                <dd data-i18n="projects.huitEdu.customer">Lecturers of HUIT</dd>
+              </div>
+              <div>
+                <dt data-i18n="projects.common.team">Team</dt>
+                <dd data-i18n="projects.common.team4">4 people</dd>
+              </div>
+              <div>
+                <dt data-i18n="projects.common.role">Role</dt>
+                <dd data-i18n="projects.common.mobileDeveloper">Mobile Developer</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="module-list">
+            <article>
+              <strong data-i18n="projects.huitEdu.module1Title">Mini-app architecture</strong
+              ><span data-i18n="projects.huitEdu.module1Body">Multiple subsystems inside one main app.</span>
+            </article>
+            <article>
+              <strong data-i18n="projects.huitEdu.module2Title">Attendance</strong
+              ><span
+                data-i18n="projects.huitEdu.module2Body"
+                >Tracking, history, explanation, and adjustment requests.</span
+              >
+            </article>
+            <article>
+              <strong data-i18n="projects.huitEdu.module3Title">Task workflows</strong
+              ><span
+                data-i18n="projects.huitEdu.module3Body"
+                >Assigned tasks, deadlines, status, progress, statistics, and
+                reporting.</span
+              >
+            </article>
+            <article>
+              <strong data-i18n="projects.huitEdu.module4Title">Lecturer dashboard</strong
+              ><span data-i18n="projects.huitEdu.module4Body">Teaching activities and semester task monitoring.</span>
+            </article>
+          </div>
+        </div>
+        <div class="case-lens">
+          <article>
+            <strong data-i18n="projects.common.architectureLens">Architecture lens</strong>
+            <p data-i18n="projects.huitEdu.lensArchitecture">
+              Uses Flutter and BLoC to separate presentation, state, and
+              business rules across multiple internal university modules.
+            </p>
+          </article>
+          <article>
+            <strong data-i18n="projects.common.experienceProof">Experience proof</strong>
+            <p data-i18n="projects.huitEdu.lensExperience">
+              Compresses daily lecturer operations into a consistent mobile
+              surface for attendance, tasks, HR, and teaching activities.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="huit-student"
+        class="project-case reveal"
+        aria-labelledby="huit-student-title"
+      >
+        <div class="project-case__header">
+          <p class="section-number">03</p>
+          <div>
+            <p class="eyebrow" data-i18n="projects.huitStudent.eyebrow">Flutter student platform</p>
+            <h2 id="huit-student-title">HUIT STUDENT</h2>
+          </div>
+          <div class="project-tags">
+            <span>Flutter</span>
+            <span>Dart</span>
+            <span>BLoC</span>
+            <span>REST APIs</span>
+          </div>
+        </div>
+        <div class="text-case">
+          <p data-i18n="projects.huitStudent.body">
+            A mobile application for HUIT students to submit feedback,
+            participate in surveys, and evaluate teaching quality and university
+            activities.
+          </p>
+          <ul>
+            <li data-i18n="projects.huitStudent.item1">Integrated Firebase Cloud Messaging for push notifications.</li>
+            <li>
+              <span data-i18n="projects.huitStudent.item2">Developed feedback list, detail view, and feedback submission
+              features.
+              </span>
+            </li>
+            <li data-i18n="projects.huitStudent.item3">Developed survey lists and survey form functionality.</li>
+            <li>
+              <span data-i18n="projects.huitStudent.item4">Applied BLoC architecture for state management and business logic
+              separation.
+              </span>
+            </li>
+            <li>
+              <span data-i18n="projects.huitStudent.item5">Handled RESTful API integration and in-app user interaction flows.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="my-dp247"
+        class="project-case secondary-case reveal"
+        aria-labelledby="my-dp247-title"
+      >
+        <div class="project-case__header">
+          <p class="section-number">04</p>
+          <div>
+            <p class="eyebrow" data-i18n="projects.myDp247.eyebrow">React Native consumer app</p>
+            <h2 id="my-dp247-title">MY DP247</h2>
+          </div>
+          <div class="project-tags">
+            <span>React Native</span>
+            <span>JavaScript</span>
+            <span>Redux</span>
+            <span>Maps</span>
+          </div>
+        </div>
+        <div class="text-case">
+          <p data-i18n="projects.myDp247.body">
+            A consumer app in the DP247 ecosystem for online shopping, food
+            ordering, promotions, and store discovery.
+          </p>
+          <ul>
+            <li data-i18n="projects.myDp247.item1">Developed product catalog and product detail modules.</li>
+            <li>
+              <span data-i18n="projects.myDp247.item2">Implemented promotion and discount features for marketing
+              campaigns.
+              </span>
+            </li>
+            <li>
+              <span data-i18n="projects.myDp247.item3">Integrated map and location services to display nearby stores and
+              support delivery operations.
+              </span>
+            </li>
+            <li>
+              <span data-i18n="projects.myDp247.item4">Built ordering workflows for order creation, confirmation, and
+              delivery tracking.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="dc40"
+        class="project-case reveal"
+        aria-labelledby="dc40-title"
+      >
+        <div class="project-case__header">
+          <p class="section-number">05</p>
+          <div>
+            <p class="eyebrow" data-i18n="projects.dc40.eyebrow">React Native community platform</p>
+            <h2 id="dc40-title">DC4.0</h2>
+          </div>
+          <div class="project-tags">
+            <span>React Native</span>
+            <span>JavaScript</span>
+            <span>Redux</span>
+            <span>REST APIs</span>
+          </div>
+        </div>
+        <div class="text-case">
+          <p data-i18n="projects.dc40.body">
+            A VNPT Media community management platform for neighborhood and
+            residential area operations, including meetings, tasks, households,
+            residents, documents, evaluations, feedback, notifications, and news
+            updates.
+          </p>
+          <ul>
+            <li>
+              <span data-i18n="projects.dc40.item1">Implemented dynamic theme customization based on user
+              configuration.
+              </span>
+            </li>
+            <li data-i18n="projects.dc40.item2">Developed meeting viewing and management features.</li>
+            <li>
+              <span data-i18n="projects.dc40.item3">Built household, resident, neighborhood, and residential area
+              management modules.
+              </span>
+            </li>
+            <li>
+              <span data-i18n="projects.dc40.item4">Implemented notification and news features for real-time
+              communication.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="hearme"
+        class="project-case secondary-case reveal"
+        aria-labelledby="hearme-title"
+      >
+        <div class="project-case__header">
+          <p class="section-number">06</p>
+          <div>
+            <p class="eyebrow" data-i18n="projects.hearme.eyebrow">Android music app</p>
+            <h2 id="hearme-title">HearMe App</h2>
+          </div>
+          <div class="project-tags">
+            <span>Kotlin</span>
+            <span>Jetpack Compose</span>
+            <span>MVVM</span>
+            <span>Firebase</span>
+          </div>
+        </div>
+        <div class="text-case">
+          <p data-i18n="projects.hearme.body">
+            An Android music streaming application that lets users discover
+            artists, manage favorite playlists, and listen to MP3 music.
+          </p>
+          <ul>
+            <li data-i18n="projects.hearme.item1">Developed responsive user interfaces using Jetpack Compose.</li>
+            <li>
+              <span data-i18n="projects.hearme.item2">Implemented screens for songs, artists, charts, and music genres.</span>
+            </li>
+            <li>
+              <span data-i18n="projects.hearme.item3">Built song detail screens with lyrics, play count, ratings, and
+              artist information.
+              </span>
+            </li>
+            <li>
+              <span data-i18n="projects.hearme.item4">Added Like, Save, Share, artist follow, and search features.</span>
+            </li>
+            <li>
+              <span data-i18n="projects.hearme.item5">Integrated music playback using audio files or URLs stored in
+              Firebase.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="reading-habit"
+        class="project-case reveal"
+        aria-labelledby="reading-habit-title"
+      >
+        <div class="project-case__header">
+          <p class="section-number">07</p>
+          <div>
+            <p class="eyebrow" data-i18n="projects.readingHabit.eyebrow">Android reading platform</p>
+            <h2 id="reading-habit-title">Reading Habit</h2>
+          </div>
+          <div class="project-tags">
+            <span>Kotlin</span>
+            <span>Jetpack Compose</span>
+            <span>Clean Architecture</span>
+            <span>Retrofit</span>
+          </div>
+        </div>
+        <div class="text-case">
+          <p data-i18n="projects.readingHabit.body">
+            A children's digital reading platform developed for KUN LOF,
+            enabling users to explore stories, comics, book series, audiobooks,
+            and videos through an engaging, interactive experience.
+          </p>
+          <ul>
+            <li>
+              <span data-i18n="projects.readingHabit.item1">Built Top Books, search, and filtering features optimized for
+              large datasets.
+              </span>
+            </li>
+            <li>
+              <span data-i18n="projects.readingHabit.item2">Implemented book detail pages for stories, comics, book
+              collections, audiobooks, and video content.
+              </span>
+            </li>
+            <li>
+              <span data-i18n="projects.readingHabit.item3">Designed domain models and integrated RESTful APIs following MVVM
+              and Clean Architecture.
+              </span>
+            </li>
+            <li>
+              <span data-i18n="projects.readingHabit.item4">Optimized app responsiveness and maintainability through modular,
+              reusable components.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span data-i18n="footer.projectsLabel">Le Bui Tan Truong · Projects</span>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

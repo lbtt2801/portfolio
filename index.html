@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Le Bui Tan Truong is a Mobile Developer building Flutter, React Native, and Kotlin applications for POS, booking, e-commerce, government, and enterprise workflows."
+      data-i18n-attr="content:meta.description"
+    />
+    <title data-i18n="meta.title">Le Bui Tan Truong | Mobile Developer</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#14110f" />
+    <link rel="preload" href="assets/mobile-systems-hero.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "index.html#person",
+            "name": "Le Bui Tan Truong",
+            "jobTitle": "Mobile Developer",
+            "email": "mailto:lebuitantruong@gmail.com",
+            "telephone": "0328467924",
+            "knowsAbout": [
+              "Flutter",
+              "React Native",
+              "Kotlin",
+              "Jetpack Compose",
+              "BLoC",
+              "Redux",
+              "Firebase",
+              "RESTful APIs",
+              "POS Printing",
+              "Mobile UX"
+            ],
+            "sameAs": ["https://github.com/lbtt2801"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "index.html#website",
+            "name": "Le Bui Tan Truong - Mobile Developer Portfolio",
+            "publisher": { "@id": "index.html#person" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Le Bui Tan Truong home">
+        <span>LE</span><span>TRUONG</span>
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        data-i18n-attr="aria-label:nav.toggle"
+        aria-expanded="false"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" data-nav>
+        <a class="is-active" href="index.html" data-i18n="nav.home">Home</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#stack" data-i18n="nav.stack">Stack</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <div
+          class="language-switcher"
+          aria-label="Language selection"
+          data-i18n-attr="aria-label:language.label"
+          data-language-switcher
+        >
+          <button type="button" data-locale-option="en">EN</button>
+          <button type="button" data-locale-option="vi">VI</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="home-hero" aria-labelledby="hero-title">
+        <div
+          class="home-hero__image premium-device-stage"
+          role="img"
+          aria-label="Simulated production mobile application for portfolio projects"
+        >
+          <div class="device-orbit" aria-hidden="true"></div>
+          <div class="device-shell" data-tilt-card>
+            <div class="device-camera"></div>
+            <div class="device-screen">
+              <div class="screen-status">
+                <span>17:30</span>
+                <span>5G 98%</span>
+              </div>
+              <div class="screen-hero">
+                <small data-i18n="home.device.kicker">Production app</small>
+                <strong data-i18n="home.device.title">Business systems</strong>
+              </div>
+              <div class="app-grid" aria-hidden="true">
+                <span>POS</span>
+                <span>EDU</span>
+                <span>MAP</span>
+                <span>API</span>
+              </div>
+              <div class="screen-card">
+                <span data-i18n="home.device.caseLabel">Current case</span>
+                <strong>DP247</strong>
+                <small data-i18n="home.device.caseDetail">Orders · Billing · Receipt printing</small>
+              </div>
+            </div>
+          </div>
+          <div class="signal-card signal-card--top">
+            <span data-i18n="home.signals.integrationLabel">Integration</span>
+            <strong data-i18n="home.signals.integrationValue">REST-ready</strong>
+          </div>
+          <div class="signal-card signal-card--bottom">
+            <span data-i18n="home.signals.architectureLabel">Architecture</span>
+            <strong>BLoC · Redux · MVVM</strong>
+          </div>
+        </div>
+        <div class="home-hero__content">
+          <p class="eyebrow" data-i18n="home.hero.eyebrow">Mobile Developer Portfolio</p>
+          <h1 id="hero-title">
+            <span data-i18n="home.hero.title1">Production-ready</span>
+            <span data-i18n="home.hero.title2">mobile apps for real</span>
+            <span data-i18n="home.hero.title3">business workflows.</span>
+          </h1>
+          <p class="hero-lede">
+            <span data-i18n="home.hero.lede1">I build Flutter, React Native, and Kotlin products</span>
+            <span data-i18n="home.hero.lede2">that combine polished UI, maintainable architecture,</span>
+            <span data-i18n="home.hero.lede3">and reliable performance in production environments.</span>
+          </p>
+          <div class="hero-skills" aria-label="Primary skills">
+            <span>Flutter</span>
+            <span>React Native</span>
+            <span>Kotlin</span>
+            <span>BLoC</span>
+            <span>Redux</span>
+            <span>REST APIs</span>
+          </div>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button--dark" href="projects.html" data-haptic
+              data-i18n="home.hero.viewCases">View case studies</a
+            >
+            <a
+              class="button button--light"
+              href="assets/CV_LeBuiTanTruong_MobileDeveloper.pdf"
+              data-haptic
+              data-i18n="home.hero.downloadCv">Download CV</a
+            >
+          </div>
+          <div class="trust-metrics" aria-label="Capability proof">
+            <div><strong>7</strong><span data-i18n="home.metrics.projects">Delivered projects</span></div>
+            <div><strong>3</strong><span data-i18n="home.metrics.stacks">Mobile stacks</span></div>
+            <div><strong>2024</strong><span data-i18n="home.metrics.role">Production role</span></div>
+          </div>
+          <div class="hero-console" aria-label="Engineering focus">
+            <div><span data-i18n="home.console.stateLabel">state</span><strong data-i18n="home.console.stateValue">production-ready</strong></div>
+            <div>
+              <span data-i18n="home.console.architectureLabel">architecture</span><strong>BLoC · Redux · MVVM</strong>
+            </div>
+            <div>
+              <span data-i18n="home.console.integrationsLabel">integrations</span
+              ><strong>REST APIs · FCM · Maps · POS Print</strong>
+            </div>
+          </div>
+        </div>
+        <aside class="availability" aria-label="Availability">
+          <span data-i18n="home.availability.label">Current</span>
+          <strong>Dai Phat Solutions</strong>
+          <small>Feb 2024 - Present</small>
+        </aside>
+      </section>
+
+      <section class="ticker" aria-label="Core technologies">
+        <strong class="ticker-label" data-i18n="home.ticker.label">Core skills</strong>
+        <span>Flutter</span>
+        <span>React Native</span>
+        <span>Jetpack Compose</span>
+        <span>BLoC</span>
+        <span>Redux</span>
+        <span>RESTful APIs</span>
+        <span>POS Printing</span>
+      </section>
+
+      <section class="proof-strip reveal" aria-label="Trust indicators">
+        <article>
+          <span data-i18n="home.proof.companyLabel">Company</span>
+          <strong>Dai Phat Solutions</strong>
+        </article>
+        <article>
+          <span data-i18n="home.proof.universityLabel">University products</span>
+          <strong>HUIT EDU · HUIT STUDENT</strong>
+        </article>
+        <article>
+          <span data-i18n="home.proof.domainLabel">Domain coverage</span>
+          <strong data-i18n="home.proof.domainValue">POS · E-commerce · Education · Government</strong>
+        </article>
+      </section>
+
+      <section class="section split-intro profile-intro reveal" aria-label="Profile summary">
+        <div>
+          <p class="eyebrow" data-i18n="home.profile.eyebrow">Profile</p>
+          <h2 data-i18n="home.profile.title">
+            Scalable mobile development focused on maintainability, performance,
+            and delivery.
+          </h2>
+        </div>
+        <p data-i18n="home.profile.body">
+          Hands-on Mobile Developer experienced in Flutter, React Native,
+          Kotlin, Jetpack Compose, reusable UI components, Firebase, maps and
+          location services, POS printing, and RESTful API integration. I build
+          scalable, high-performance mobile applications with clean architecture
+          principles, strong debugging habits, and real-world production
+          stability.
+        </p>
+      </section>
+
+      <section
+        class="section signature-work reveal"
+        aria-labelledby="signature-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="home.featured.eyebrow">Featured case</p>
+          <h2 id="signature-title" data-i18n="home.featured.title">
+            DP247 supports restaurant and retail operations through one reliable
+            mobile workflow
+          </h2>
+        </div>
+
+        <a
+          class="case-panel glass-panel"
+          href="projects.html#dp247"
+          aria-label="Open DP247 project case study"
+          data-haptic
+        >
+          <div class="case-copy">
+            <span>Mar 2024 - Present</span>
+            <h3 data-i18n="home.featured.cardTitle">
+              POS, inventory, promotion, billing, barcode, and receipt printing
+              in one business app ecosystem.
+            </h3>
+            <p data-i18n="home.featured.cardBody">
+              Built core modules for table management, order processing,
+              billing, product management, inventory import/export, promotions,
+              loyalty points, barcode scanning, and printer connectivity over
+              Wi-Fi, Bluetooth, and USB.
+            </p>
+          </div>
+          <div class="product-shot" aria-hidden="true">
+            <div class="phone phone--front">
+              <div class="phone-bar"></div>
+              <div class="screen-section screen-section--green"></div>
+              <div class="table-grid">
+                <span></span><span></span><span></span><span></span><span></span
+                ><span></span>
+              </div>
+              <div class="order-row"></div>
+              <div class="order-row short"></div>
+            </div>
+            <div class="phone phone--back">
+              <div class="phone-bar"></div>
+              <div class="receipt-lines">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="pay-button"></div>
+            </div>
+            <div class="printer">
+              <span></span>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <section
+        id="experience"
+        class="section experience reveal"
+        aria-labelledby="experience-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="home.experience.eyebrow">Experience</p>
+          <h2 id="experience-title" data-i18n="home.experience.title">
+            Two roles focused on mobile applications that perform in real
+            production environments
+          </h2>
+        </div>
+
+        <div class="experience-list">
+          <article>
+            <time>Feb 2024 - Present</time>
+            <div>
+              <h3>Mobile Developer · Dai Phat Solutions</h3>
+              <p data-i18n="home.experience.dps.body">
+                Developing Flutter and React Native applications for business
+                management systems, booking platforms, e-commerce, government
+                applications, and enterprise workflows.
+              </p>
+              <ul>
+                <li>
+                  <span data-i18n="home.experience.dps.item1">Built reusable UI components from UI/UX specifications and
+                  responsive design principles.
+                  </span>
+                </li>
+                <li>
+                  <span data-i18n="home.experience.dps.item2">Applied BLoC and Redux for maintainable state architecture.</span>
+                </li>
+                <li>
+                  <span data-i18n="home.experience.dps.item3">Integrated RESTful APIs, implemented complex workflows, and
+                  improved production stability.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <time>Jul 2023 - Jan 2024</time>
+            <div>
+              <h3>
+                Android Developer · Sunrise Software Solutions Corporation
+                (S3Corp)
+              </h3>
+              <p data-i18n="home.experience.s3.body">
+                Built Android applications using Kotlin and Jetpack Compose
+                while collaborating with cross-functional teams on small to
+                medium projects and the company's main production application.
+              </p>
+              <ul>
+                <li><span data-i18n="home.experience.s3.item1">Implemented interfaces from UI/UX and BA documents.</span></li>
+                <li>
+                  <span data-i18n="home.experience.s3.item2">Used MVVM/MVP architecture for Android application logic.</span>
+                </li>
+                <li>
+                  <span data-i18n="home.experience.s3.item3">Consumed backend APIs and delivered features on schedule.</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="stack"
+        class="section stack reveal"
+        aria-labelledby="stack-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="home.stack.eyebrow">Stack</p>
+          <h2 id="stack-title" data-i18n="home.stack.title">
+            A practical mobile toolkit for scalable apps, complex workflows, and
+            stable releases.
+          </h2>
+        </div>
+        <div class="stack-board">
+          <article>
+            <strong data-i18n="home.stack.mobileLabel">Mobile</strong
+            ><span data-i18n="home.stack.mobileValue">Flutter, React Native, Jetpack Compose</span>
+          </article>
+          <article>
+            <strong data-i18n="home.stack.languagesLabel">Languages</strong
+            ><span data-i18n="home.stack.languagesValue">Dart, JavaScript, TypeScript, Kotlin</span>
+          </article>
+          <article><strong data-i18n="home.stack.stateLabel">State</strong><span data-i18n="home.stack.stateValue">BLoC, Redux</span></article>
+          <article>
+            <strong data-i18n="home.stack.featuresLabel">Product Features</strong
+            ><span data-i18n="home.stack.featuresValue">Firebase, RESTful APIs, Maps, Location, POS Printing</span>
+          </article>
+          <article>
+            <strong data-i18n="home.stack.debuggingLabel">Debugging</strong
+            ><span data-i18n="home.stack.debuggingValue">Git, DevTools, React Native Debugger, Flipper</span>
+          </article>
+          <article>
+            <strong data-i18n="home.stack.workflowLabel">Workflow</strong
+            ><span
+              data-i18n="home.stack.workflowValue"
+              >Problem-solving, Agile teamwork, self-learning, AI-assisted
+              development</span
+            >
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="contact-band reveal"
+        aria-labelledby="contact-title"
+      >
+        <p class="eyebrow" data-i18n="home.contact.eyebrow">Contact</p>
+        <h2 id="contact-title" data-i18n="home.contact.title">
+          Ready to build a mobile application that is clear, maintainable, and
+          production-ready.
+        </h2>
+        <div class="contact-links">
+          <a href="mailto:lebuitantruong@gmail.com">lebuitantruong@gmail.com</a>
+          <a href="tel:0328467924">0328467924</a>
+          <a href="https://github.com/lbtt2801">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span data-i18n="footer.homeLabel">Le Bui Tan Truong · Mobile Developer</span>
+      <a href="projects.html" data-i18n="nav.projects">Projects</a>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
