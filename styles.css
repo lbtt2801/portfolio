@@ -22,6 +22,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -85,9 +89,11 @@ p {
   font-size: 0.72rem;
   font-weight: 900;
   letter-spacing: 0;
-  line-height: 0.92;
+  line-height: 1;
   position: relative;
+  row-gap: 2px;
   text-transform: uppercase;
+  width: max-content;
 }
 
 .brand::before {
@@ -100,8 +106,13 @@ p {
   width: 8px;
 }
 
-.brand span:last-child {
+.brand span:first-child {
   color: var(--coral);
+}
+
+.brand span:last-child {
+  justify-self: end;
+  color: var(--ink);
 }
 
 .nav {
@@ -875,7 +886,8 @@ h2 {
 .admin-card,
 .admin-notice,
 .admin-toolbar,
-.admin-field {
+.admin-field,
+.admin-section-card {
   background: var(--paper-soft);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -916,9 +928,87 @@ h2 {
   padding: 16px;
 }
 
+.admin-context {
+  background: rgba(53, 209, 161, 0.08);
+  border: 1px solid rgba(53, 209, 161, 0.22);
+  border-radius: var(--radius);
+  color: var(--teal);
+  font-weight: 900;
+  padding: 13px 16px;
+}
+
 .admin-fields {
   display: grid;
+  gap: 18px;
+}
+
+.admin-section-card {
+  overflow: hidden;
+}
+
+.admin-section-header {
+  align-items: start;
+  background:
+    linear-gradient(90deg, rgba(242, 199, 110, 0.08), rgba(53, 209, 161, 0.07)),
+    rgba(255, 252, 245, 0.035);
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: 18px;
+  justify-content: space-between;
+  padding: 18px clamp(16px, 2vw, 22px);
+  text-align: left;
+  width: 100%;
+}
+
+.admin-section-header:hover {
+  background:
+    linear-gradient(90deg, rgba(242, 199, 110, 0.13), rgba(53, 209, 161, 0.11)),
+    rgba(255, 252, 245, 0.052);
+}
+
+.admin-section-header h3 {
+  color: var(--ink);
+  font-size: 1.16rem;
+  margin: 0;
+}
+
+.admin-section-header p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 6px 0 0;
+}
+
+.admin-section-count {
+  background: rgba(255, 252, 245, 0.08);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--gold);
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  font-weight: 900;
+  padding: 7px 10px;
+}
+
+.admin-section-count::after {
+  content: " +";
+}
+
+.admin-section-header[aria-expanded="true"] .admin-section-count::after {
+  content: " -";
+}
+
+.admin-section-body {
+  display: grid;
   gap: 12px;
+  padding: clamp(14px, 2vw, 20px);
+}
+
+.admin-section-card.is-collapsed .admin-section-body {
+  display: none;
 }
 
 .admin-field {
@@ -927,7 +1017,7 @@ h2 {
   padding: 16px;
 }
 
-.admin-field span,
+.admin-field-label,
 .admin-card label,
 .admin-toolbar label {
   color: var(--gold);
@@ -935,6 +1025,19 @@ h2 {
   font-size: 0.82rem;
   font-weight: 900;
   gap: 8px;
+}
+
+.admin-field code {
+  color: rgba(248, 243, 234, 0.52);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.74rem;
+  overflow-wrap: anywhere;
+}
+
+.admin-field small {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
 }
 
 .admin-card input,
@@ -967,6 +1070,44 @@ h2 {
 
 .admin-status[data-tone="error"] {
   color: var(--gold);
+}
+
+.admin-toast-region {
+  display: grid;
+  gap: 10px;
+  max-width: min(420px, calc(100vw - 32px));
+  position: fixed;
+  right: 18px;
+  top: 18px;
+  width: 420px;
+  z-index: 120;
+}
+
+.admin-toast {
+  background: rgba(15, 17, 16, 0.96);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.36);
+  color: var(--ink);
+  font-weight: 800;
+  line-height: 1.45;
+  padding: 14px 16px;
+  transform: translateY(0);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.admin-toast[data-tone="success"] {
+  border-left-color: var(--teal);
+}
+
+.admin-toast[data-tone="error"] {
+  border-left-color: var(--gold);
+}
+
+.admin-toast.is-leaving {
+  opacity: 0;
+  transform: translateY(-8px);
 }
 
 .project-hero {
@@ -1413,6 +1554,22 @@ h2 {
     width: 100%;
   }
 
+  .admin-section-header {
+    display: grid;
+  }
+
+  .admin-section-count {
+    justify-self: start;
+  }
+
+  .admin-toast-region {
+    left: 14px;
+    max-width: none;
+    right: 14px;
+    top: 14px;
+    width: auto;
+  }
+
   .home-hero,
   .split-intro,
   .case-panel,
@@ -1678,8 +1835,13 @@ li {
   background: var(--gold);
 }
 
-.brand span:last-child {
+.brand span:first-child {
   color: var(--teal);
+}
+
+.brand span:last-child {
+  justify-self: end;
+  color: var(--ink);
 }
 
 .nav a {
