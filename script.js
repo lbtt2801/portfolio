@@ -39,7 +39,7 @@ const fetchLocalContent = async (locale) => {
 };
 
 const fetchSupabaseContent = async (locale, page) => {
-  const { supabaseUrl, supabaseAnonKey, contentTable = "portfolio_content" } = appConfig;
+  const { supabaseUrl, supabaseAnonKey, contentTable = "content" } = appConfig;
   if (!appConfig.useSupabaseContent || !supabaseUrl || !supabaseAnonKey) return null;
 
   const endpoint = new URL(`${supabaseUrl.replace(/\/$/, "")}/rest/v1/${contentTable}`);

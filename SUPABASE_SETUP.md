@@ -14,7 +14,7 @@ Create a free Supabase project, then open **SQL Editor** and run:
 After creating your Auth user, add your email to the admin allowlist:
 
 ```sql
-insert into public.portfolio_admins (email)
+insert into public.admins (email)
 values ('your-email@example.com');
 ```
 
@@ -24,12 +24,54 @@ In Supabase dashboard:
 
 - Go to **Authentication**.
 - Create a user with email and password.
-- Use the same email inserted into `portfolio_admins`.
+- Use the same email inserted into `admins`.
 
-Only emails in `portfolio_admins` can insert/update/delete content.
+Only emails in `admins` can insert/update/delete content.
 Public visitors can only read published content.
 
-## 3. Configure Frontend
+## 3. Database Structure
+
+The schema has two layers.
+
+`content` stores page-level translation keys used by the current
+frontend and by `admin.html`.
+
+Structured CV/project tables:
+
+- `profile`
+- `profile_translations`
+- `skill_categories`
+- `skill_category_translations`
+- `skills`
+- `experiences`
+- `experience_translations`
+- `experience_bullets`
+- `projects`
+- `project_translations`
+- `project_responsibilities`
+- `project_modules`
+- `technologies`
+- `project_technologies`
+- `project_links`
+
+The SQL also seeds initial data from the CV and creates:
+
+- `project_cards` view
+- `get_projects(locale)` RPC function
+
+You can query structured projects through Supabase RPC:
+
+```http
+POST /rest/v1/rpc/get_projects
+```
+
+Body:
+
+```json
+{ "requested_locale": "vi" }
+```
+
+## 4. Configure Frontend
 
 Open `config.js` and update:
 
@@ -38,13 +80,13 @@ window.PORTFOLIO_CONFIG = {
   useSupabaseContent: true,
   supabaseUrl: "https://your-project.supabase.co",
   supabaseAnonKey: "your-anon-key",
-  contentTable: "portfolio_content"
+  contentTable: "content"
 };
 ```
 
 The anon key is public by design. Row Level Security protects write access.
 
-## 4. Edit Content Online
+## 5. Edit Content Online
 
 Deploy to Vercel, then open:
 
@@ -54,7 +96,7 @@ https://your-domain.vercel.app/admin.html
 
 Sign in, choose locale/page, edit fields, and save.
 
-## 5. Fallback Behavior
+## 6. Fallback Behavior
 
 The public pages always load local JSON first:
 

@@ -1,7 +1,7 @@
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
 
 const config = window.PORTFOLIO_CONFIG || {};
-const tableName = config.contentTable || "portfolio_content";
+const tableName = config.contentTable || "content";
 const supportedLocales = ["en", "vi"];
 const pageFiles = {
   home: "index.html",
